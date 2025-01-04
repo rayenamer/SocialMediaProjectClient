@@ -27,11 +27,14 @@
       
       @if(accountService.currentUser()){
         <div dropdown class = "dropdown">
+          <img 
+          class="me-2"
+          src="{{accountService.currentUser()?.photoUrl}}" alt="userMainImage">
           <a dropdownToggle class="dropdown-toggle text-light text-decoration-none">
-            Welcome {{accountService.currentUser()?.username }}
+            Welcome {{accountService.currentUser()?.KnownAs }}
           </a>
           <div *dropdownMenu class="dropdown-menu">
-            <a class="dropdown-item">Edit Profile</a>
+            <a routerLink="/member/edit" routerLinkActive="active" class="dropdown-item">Edit Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" (click)="logout()">Log Out</a>
           </div>

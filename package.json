@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
+    "@angular/cdk": "^19.0.4",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
     "@angular/core": "^18.2.0",
@@ -22,7 +23,10 @@
     "bootswatch": "^5.3.3",
     "font-awesome": "^4.7.0",
     "ng-gallery": "^12.0.0",
+    "ng2-file-upload": "^7.0.1",
     "ngx-bootstrap": "^12.0.0",
+    "ngx-spinner": "^17.0.0",
+    "ngx-timeago": "^3.0.0",
     "ngx-toastr": "^19.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -47,6 +51,10 @@
       "@angular/core": "$@angular/core",
       "@angular/animations": "$@angular/animations",
       "@angular/forms": "$@angular/forms"
+    },
+    "ng2-file-upload": {
+      "@angular/common": "$@angular/common",
+      "@angular/core": "$@angular/core"
     }
   }
 }
