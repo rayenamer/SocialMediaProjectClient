@@ -24,19 +24,21 @@ export class AppComponent implements OnInit {
   }
 
   setCurrentUser(){
-    console.log('hamout el current tekhdem;')
     const userString = localStorage.getItem('user');
-    if(userString==null){
-      console.log('dkhalna lel if');
-      return;
-    } 
-    else{
-      console.log('mchina lel else');
-      const user = JSON.parse(userString);
-      console.log('localStorage content:', localStorage.getItem('user'));
-      this.accountService.currentUser.set(user);
-      return user;
-    }
+    if(!userString) return;
+    const user = JSON.parse(userString);
+    this.accountService.setCurrentUser(user);
+   //if(userString==null){
+   //  console.log('dkhalna lel if');
+   //  return;
+   //} 
+   //else{
+   //  console.log('mchina lel else');
+   //  const user = JSON.parse(userString);
+   //  console.log('localStorage content:', localStorage.getItem('user'));
+   //  this.accountService.currentUser.set(user);
+   //  return user;
+   //}
 
   }
 
