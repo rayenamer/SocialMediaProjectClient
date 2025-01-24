@@ -4,10 +4,11 @@ import { AccountService } from '../__services/account.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { HasRoleDirective } from '../_directives/has-role.directive';
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [FormsModule,BsDropdownModule, RouterLink, RouterLinkActive],
+  imports: [FormsModule,BsDropdownModule, RouterLink, RouterLinkActive,HasRoleDirective],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
@@ -22,7 +23,7 @@ export class NavComponent {
       next: _ =>{
         console.log('API response:', Response);
         this.router.navigateByUrl('/members');
-        console.log(this.accountService.currentUser()?.userName);
+        console.log(this.accountService.currentUser()?.username);
       },
       error: error =>this.toastr.error(error.error)
     })
