@@ -24,7 +24,7 @@ export class MemberEditComponent implements OnInit{
     }
   }
   member?: Member;
-  private accounService = inject(AccountService);
+  private accountService = inject(AccountService);
   private memberService = inject(MembersService);
   private toastr = inject(ToastrService);
 
@@ -32,10 +32,11 @@ export class MemberEditComponent implements OnInit{
     this.loadMember();
   }
 
-  loadMember(){
-    const user = this.accounService.currentUser();
-    if(!user) return;
-    this.memberService.getMember(user.username).subscribe({
+  loadMember() {
+    const user = this.accountService.currentUser();
+    console.log(user);
+    if (!user) return;
+    this.memberService.getMember(user.userName).subscribe({
       next: member => this.member = member
     })
   }

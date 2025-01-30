@@ -23,7 +23,7 @@ export class NavComponent {
       next: _ =>{
         console.log('API response:', Response);
         this.router.navigateByUrl('/members');
-        console.log(this.accountService.currentUser()?.username);
+        console.log(this.accountService.currentUser()?.userName);
       },
       error: error =>this.toastr.error(error.error)
     })
