@@ -221,6 +221,5 @@ Please ensure your code adheres to the project's coding standards and includes a
 ## 👤 Author
 
 **Rayen Ameur**  
-[LinkedIn Profile](www.linkedin.com/in/rayen-ameur-10000s000)
 
 If you have any questions or feedback, feel free to reach out.
